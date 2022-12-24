@@ -1,0 +1,33 @@
+@import "../styles/mixins.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+	font-family: "Roboto";
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100%;
+	background: $background-white;
+
+	& button,
+	a {
+		color: $basic-blue;
+		text-decoration: none;
+	}
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: space-between;
+}
