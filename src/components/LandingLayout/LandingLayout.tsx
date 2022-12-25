@@ -1,12 +1,17 @@
 import React, { FC } from "react";
 import LandingHeader from "../LandingHeader/LandingHeader";
-import styles from "./LandingLayout.module.scss";
+import LayoutFooter from "../LayoutFooter/LayoutFooter";
+import s from "./LandingLayout.module.scss";
 
-interface LandingLayoutProps {}
+interface LandingLayoutProps {
+	children: any;
+}
 
-const LandingLayout: FC<LandingLayoutProps> = () => (
-	<div className={styles.LandingLayout}>
+const LandingLayout: FC<LandingLayoutProps> = ({ children }) => (
+	<div className={"page"}>
 		<LandingHeader />
+		<div className={s.content}>{children}</div>
+		<LayoutFooter />
 	</div>
 );
 

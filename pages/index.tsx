@@ -20,7 +20,9 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<LandingLayout />
+			<LandingLayout>
+				<h1>sadas</h1>
+			</LandingLayout>
 		</>
 	);
 }
