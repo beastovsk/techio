@@ -1,0 +1,93 @@
+@import "../../../styles/mixins.scss";
+
+.container {
+	background: $background-blue;
+}
+.header {
+	@include fluid(margin-top, 60px, 80px);
+	@include fluid(margin-bottom, 60px, 80px);
+}
+.title {
+	@include fluid(font-size, 32px, 36px);
+	@include fluid(margin-bottom, 30px, 50px);
+
+	display: flex;
+	justify-content: center;
+	color: $basic-white;
+}
+.feedback {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+
+	@media screen and (max-width: $breakpoint-md) {
+		flex-direction: column;
+	}
+}
+.input {
+	@include fluid(font-size, 16px, 24px);
+
+	padding: 20px 30px;
+	border-radius: 15px 0px 0px 15px;
+	background: none;
+	color: $basic-white;
+	width: 50%;
+
+	&::placeholder {
+		color: $basic-grey;
+	}
+
+	&:active {
+		border: none;
+	}
+
+	@media screen and (max-width: $breakpoint-md) {
+		width: 60%;
+		border-radius: 15px;
+		margin: auto;
+	}
+}
+.button {
+	@include fluid(font-size, 16px, 24px);
+	@include fluid(padding-top, 10px, 20px);
+	@include fluid(padding-bottom, 10px, 20px);
+	@include fluid(padding-left, 30px, 60px);
+	@include fluid(padding-right, 30px, 60px);
+
+	border-radius: 0px 15px 15px 0px;
+	border: none;
+	background: $basic-blue;
+	color: $basic-white;
+
+	@media screen and (max-width: $breakpoint-md) {
+		border-radius: 15px;
+		margin: 20px auto;
+	}
+}
+.logo {
+	@include fluid(margin-bottom, 20px, 40px);
+	@include fluid(font-size, 34px, 42px);
+
+	color: $basic-white;
+	font-weight: 400;
+}
+.logoSpan {
+	color: $basic-blue;
+}
+.content {
+	@include container;
+	@include fluid(margin-bottom, 40px, 60px);
+}
+.list {
+	list-style: none;
+}
+.item {
+	@include fluid(margin-bottom, 10px, 20px);
+	@include fluid(font-size, 16px, 18px);
+	font-weight: 300;
+	color: $basic-grey;
+
+	&:last-child {
+		margin: 0;
+	}
+}
