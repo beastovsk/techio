@@ -1,0 +1,22 @@
+@import "../../../styles/mixins.scss";
+
+.container {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+.title {
+	@include fluid(font-size, 32px, 42px);
+	line-height: 50px;
+}
+
+.subtitle {
+	@include fluid(margin-top, 10px, 20px);
+	@include fluid(margin-bottom, 30px, 40px);
+	@include fluid(font-size, 16px, 24px);
+
+	line-height: 25px;
+}
