@@ -16,7 +16,11 @@ const LayoutFooter: FC<LayoutFooterProps> = () => {
 			<div className={s.header}>
 				<h1 className={s.title}>Развивай свой бизнес с нами.</h1>
 				<div className={s.feedback}>
-					<Input className={s.input} placeholder="Введи свой email" />
+					<Input
+						className={s.input}
+						placeholder="Введи свой email"
+						// onMouseDown={(e) => e.preventDefault()}
+					/>
 					<button className={s.button}>Начать</button>
 				</div>
 			</div>
