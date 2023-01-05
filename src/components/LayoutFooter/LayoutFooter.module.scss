@@ -8,12 +8,16 @@
 	@include fluid(margin-bottom, 60px, 80px);
 }
 .title {
-	@include fluid(font-size, 32px, 36px);
+	@include fluid(font-size, 32px, 42px);
 	@include fluid(margin-bottom, 30px, 50px);
 
 	display: flex;
 	justify-content: center;
 	color: $basic-white;
+
+	@media screen and (max-width: $breakpoint-sm) {
+		@include fluid(font-size, 22px, 28px);
+	}
 }
 .feedback {
 	display: flex;
@@ -38,7 +42,7 @@
 	}
 
 	@media screen and (max-width: $breakpoint-md) {
-		width: 60%;
+		width: 80%;
 		border-radius: 15px;
 		margin: auto;
 	}
@@ -69,6 +73,7 @@
 }
 .logoSpan {
 	color: $basic-blue;
+	font-weight: 700;
 }
 .content {
 	@include container;

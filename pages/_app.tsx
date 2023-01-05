@@ -7,7 +7,7 @@ import locale from "antd/locale/ru_RU";
 import { Roboto } from "@next/font/google";
 
 const roboto = Roboto({
-	subsets: ["latin"],
+	subsets: ["latin", "cyrillic"],
 	weight: ["400", "700"],
 });
 

@@ -1,1 +1,47 @@
-.LandingBanner {}
+@import "../../../styles/mixins.scss";
+
+.container {
+	@include fluid(margin-top, 60px, 100px);
+	@include fluid(margin-bottom, 60px, 100px);
+	display: flex;
+	justify-content: space-between;
+}
+
+.content {
+	text-align: center;
+
+	width: 50%;
+
+	@media screen and (max-width: $breakpoint-md) {
+		width: 100%;
+	}
+}
+.title {
+	@include fluid(font-size, 32px, 56px);
+}
+
+.subtitle {
+	@include fluid(margin-top, 30px, 40px);
+	@include fluid(margin-bottom, 30px, 40px);
+	@include fluid(font-size, 16px, 24px);
+}
+.button {
+	display: flex;
+	margin: auto;
+	padding: 15px 40px;
+	border: none;
+	background: #0555ff;
+	color: $basic-white;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.arrow {
+	margin-left: 10px;
+}
+
+.womanImage {
+	@include fluid(width, 200px, 250px);
+}
+.manImage {
+	@include fluid(width, 200px, 250px);
+}

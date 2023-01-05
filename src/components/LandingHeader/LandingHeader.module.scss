@@ -13,9 +13,11 @@
 .logo {
 	@include fluid(font-size, 28px, 36px);
 
+	font-weight: 400;
 	color: $basic-black;
 }
 .logoSpan {
+	font-weight: 700;
 	color: $basic-blue;
 }
 
