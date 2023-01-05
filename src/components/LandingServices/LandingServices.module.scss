@@ -1,0 +1,59 @@
+@import "../../../styles/mixins.scss";
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media screen and (max-width: $breakpoint-md) {
+		@include fluid(margin-bottom, 60px, 100px);
+
+		flex-direction: column;
+	}
+}
+.reverseFlex {
+	flex-direction: row-reverse;
+
+	@media screen and (max-width: $breakpoint-md) {
+		flex-direction: column;
+	}
+}
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 40%;
+	margin: auto;
+
+	@media screen and (max-width: $breakpoint-md) {
+		@include fluid(margin-bottom, 30px, 40px);
+		width: 100%;
+	}
+}
+
+.image {
+	@include fluid(width, 300px, 500px);
+
+	display: flex;
+
+	@media screen and (max-width: $breakpoint-md) {
+		@include fluid(height, 300px, 500px);
+	}
+}
+
+.title {
+	@include fluid(font-size, 42px, 56px);
+	@include fluid(margin-bottom, 30px, 40px);
+}
+.subtitle {
+	@include fluid(font-size, 14px, 18px);
+	@include fluid(margin-bottom, 20px, 30px);
+}
+.link {
+	text-decoration: underline;
+}
