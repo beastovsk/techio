@@ -15,15 +15,15 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 	const navigationList = [
 		{
 			id: 0,
-			title: "Главная",
+			title: "Home",
 		},
 		{
 			id: 1,
-			title: "Услуги",
+			title: "Services",
 		},
 		{
 			id: 2,
-			title: "Портфолио",
+			title: "Portfolio",
 		},
 	];
 
@@ -54,7 +54,7 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 						))}
 					</nav>
 					<Button type="primary" size="large">
-						Связаться с нами
+						Contact with us
 					</Button>
 				</>
 			)}
@@ -69,7 +69,7 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 				</nav>
 				<div className={s.btnContainer}>
 					<Button type="primary" size="large" className={s.button}>
-						Связаться с нами
+						Contact with us
 					</Button>
 				</div>
 			</Drawer>

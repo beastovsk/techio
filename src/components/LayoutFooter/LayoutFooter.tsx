@@ -1,4 +1,4 @@
-import { Button, Input } from "antd";
+import { Input } from "antd";
 import React, { FC } from "react";
 import s from "./LayoutFooter.module.scss";
 
@@ -6,7 +6,7 @@ interface LayoutFooterProps {}
 
 const LayoutFooter: FC<LayoutFooterProps> = () => {
 	const companyInfo = [
-		{ id: 0, label: "Россия, Саратов" },
+		{ id: 0, label: "Russia" },
 		{ id: 1, label: "+7 (111) 111 11-11" },
 		{ id: 2, label: "email@mail.ru" },
 	];
@@ -14,14 +14,14 @@ const LayoutFooter: FC<LayoutFooterProps> = () => {
 	return (
 		<div className={s.container}>
 			<div className={s.header}>
-				<h1 className={s.title}>Развивай свой бизнес с нами.</h1>
+				<h1 className={s.title}>Develop your business with us.</h1>
 				<div className={s.feedback}>
 					<Input
 						className={s.input}
-						placeholder="Введи свой email"
+						placeholder="Input your email"
 						// onMouseDown={(e) => e.preventDefault()}
 					/>
-					<button className={s.button}>Начать</button>
+					<button className={s.button}>Start</button>
 				</div>
 			</div>
 			<div className={s.content}>

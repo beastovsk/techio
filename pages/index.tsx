@@ -39,7 +39,6 @@ export default function Home() {
 			<LandingBanner />
 			<LandingInfo />
 			<LandingServices servicesList={servicesList} />
-			<h1>sadas</h1>
 		</LandingLayout>
 	);
 }
