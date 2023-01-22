@@ -1,14 +1,21 @@
-import { Button, Drawer } from "antd";
+import { Button, Drawer, Form, Input, Tooltip } from "antd";
 import Link from "next/link";
 import React, { FC, useState } from "react";
 import s from "./LandingHeader.module.scss";
 
 import useMedia from "use-media";
+import { ModalComponent } from "../UI/MyModal/ModalComponent";
+import { customNotification } from "../../utils/notification";
 
 interface LandingHeaderProps {}
 
 const LandingHeader: FC<LandingHeaderProps> = () => {
+	const [contact] = Form.useForm();
+
 	const [drawer, setDrawer] = useState(false);
+	const [contactOpen, setContactOpen] = useState(false);
+
+	const [loading, setLoading] = useState(false);
 
 	const isBurger = useMedia({ maxWidth: "768px" }, true);
 
@@ -26,6 +33,27 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 			title: "Portfolio",
 		},
 	];
+
+	const onSubmitContact = async ({ email }: { email: string }) => {
+		// Modal contact form (UX), async imitation
+		setLoading(true);
+
+		setTimeout(() => {
+			setLoading(false);
+
+			customNotification(
+				"success",
+				"top",
+				"Thank you",
+				"We text you soon!"
+			);
+
+			console.log(`Users's email: ${email}`);
+
+			setContactOpen(false);
+			contact.resetFields();
+		}, 2000);
+	};
 
 	return (
 		<div className={s.container}>
@@ -53,7 +81,11 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 							</Link>
 						))}
 					</nav>
-					<Button type="primary" size="large">
+					<Button
+						type="primary"
+						size="large"
+						onClick={() => setContactOpen(true)}
+					>
 						Contact with us
 					</Button>
 				</>
@@ -68,11 +100,56 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 					))}
 				</nav>
 				<div className={s.btnContainer}>
-					<Button type="primary" size="large" className={s.button}>
+					<Button
+						type="primary"
+						size="large"
+						className={s.button}
+						onClick={() => {
+							setContactOpen(true);
+							setDrawer(false);
+						}}
+					>
 						Contact with us
 					</Button>
 				</div>
 			</Drawer>
+
+			<ModalComponent open={contactOpen} setOpen={setContactOpen}>
+				<Form onFinish={onSubmitContact} form={contact}>
+					<p className={s.contactTitle}>Input your contacts</p>
+					<Form.Item
+						name="email"
+						label="Email"
+						rules={[
+							{
+								required: true,
+								message: "Please input your email!",
+							},
+						]}
+					>
+						<Input className={s.contactInput} />
+					</Form.Item>
+					<Form.Item className={s.contactButtons}>
+						<Button
+							size="large"
+							type="default"
+							className={s.contactButton}
+							onClick={() => setContactOpen(false)}
+						>
+							Close
+						</Button>
+						<Button
+							size="large"
+							type="primary"
+							htmlType="submit"
+							className={s.contactButton}
+							loading={loading}
+						>
+							Submit
+						</Button>
+					</Form.Item>
+				</Form>
+			</ModalComponent>
 		</div>
 	);
 };

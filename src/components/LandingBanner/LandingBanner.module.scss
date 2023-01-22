@@ -37,6 +37,11 @@
 	color: $basic-white;
 	border-radius: 30px;
 	cursor: pointer;
+
+	&:hover {
+		background: rgb(102, 144, 218);
+		transition: $trn;
+	}
 }
 .arrow {
 	margin-left: 10px;

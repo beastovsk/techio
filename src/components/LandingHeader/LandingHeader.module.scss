@@ -74,3 +74,19 @@
 		margin: auto;
 	}
 }
+.contactTitle {
+	@include fluid(font-size, 16px, 18px);
+	@include fluid(margin-bottom, 20px, 40px);
+}
+.contactButtons {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+}
+.contactButton {
+	// Button at contact form modal
+
+	&:last-child {
+		margin-left: 10px;
+	}
+}
