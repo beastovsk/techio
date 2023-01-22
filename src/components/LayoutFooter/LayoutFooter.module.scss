@@ -58,6 +58,12 @@
 	border: none;
 	background: $basic-blue;
 	color: $basic-white;
+	cursor: pointer;
+
+	&:hover {
+		background: rgb(102, 144, 218);
+		transition: $trn;
+	}
 
 	@media screen and (max-width: $breakpoint-md) {
 		border-radius: 15px;
