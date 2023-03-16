@@ -3,33 +3,36 @@ import LandingInfo from "../src/components/LandingInfo/LandingInfo";
 import LandingLayout from "../src/components/LandingLayout/LandingLayout";
 import LandingServices from "../src/components/LandingServices/LandingServices";
 
-import firstImage from "../src/assets/landing-image-1.svg";
-import secondImage from "../src/assets/landing-image-2.svg";
-import thirdImage from "../src/assets/landing-image-3.svg";
+// import firstImage from "../src/assets/landing-image-1.svg";
+// import secondImage from "../src/assets/landing-image-2.svg";
+// import thirdImage from "../src/assets/landing-image-3.svg";
+
+import meeting from "../src/assets/lottie/meeting.json";
+import developing from "../src/assets/lottie/developing.json";
+import result from "../src/assets/lottie/result.json";
 
 export default function Home() {
 	const servicesList = [
 		{
-			title: "Develop",
-			subtitle:
-				"Develop for all your users' devices with just one codebase. Add fast refresh, true native capabilities, and your creativity, and you'll have the app your users want in no time.",
-			image: firstImage,
+			title: "Митинг",
+			subtitle: "Определение потребности, цели и тематики сайта",
+			lottie: meeting,
 			link: "",
 			reversed: false,
 		},
 		{
-			title: "Build",
+			title: "Разработка",
 			subtitle:
-				"Develop for all your users' devices with just one codebase. Add fast refresh, true native capabilities, and your creativity, and you'll have the app your users want in no time.",
-			image: secondImage,
+				"Пишем код для вашего будущего продукта на современных технологиях для быстрого взаимодействия сайта с клиентом",
+			lottie: developing,
 			link: "",
 			reversed: true,
 		},
 		{
-			title: "Update",
+			title: "Результат",
 			subtitle:
-				"Develop for all your users' devices with just one codebase. Add fast refresh, true native capabilities, and your creativity, and you'll have the app your users want in no time.",
-			image: thirdImage,
+				"Вы выходите на рынок, увеличиваете продажи и улучшаете свой бренд",
+			lottie: result,
 			link: "",
 			reversed: false,
 		},

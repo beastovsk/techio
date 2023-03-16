@@ -6,16 +6,15 @@ interface LandingInfoProps {}
 const LandingInfo: FC<LandingInfoProps> = () => (
 	<div className={s.container}>
 		<h1 className={s.title}>
-			Award-winning logistics services.
+			Кто мы такие?
 			<br />
-			Powered by technology, delivered by experts.
+			Чем мы можем вам помочь?
 		</h1>
 		<p className={s.subtitle}>
-			Businesses are leaving money on the table every day due to missed
-			supply
-			<br /> chain opportunities. Zencargo unlocks your potential with
-			digital freight forwarding that <br /> drives cost savings and
-			revenue improvements for your business.
+			Мы - команда разработчиков с многолетним стажем.
+			<br /> Умеем создавать сайты любой сложности для любой тематики,
+			<br /> Увелечиваем продажи вашего бизнеса и помогаем увести клиентов
+			у ваших конкурентов
 		</p>
 	</div>
 );

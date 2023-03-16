@@ -21,16 +21,16 @@ const LandingBanner: FC<LandingBannerProps> = () => {
 			) : null}
 			<div className={s.content}>
 				<h1 className={s.title}>
-					Make your life
+					Помогаем бизнесу
 					<br />
-					Day so much easy.
+					увеличивать продажи.
 				</h1>
 				<p className={s.subtitle}>
-					Build one project that runs natively done by you users'
-					devices to turn for that by.
+					Пишем сайты для быстрого и эффективного запуска вашего
+					бизнеса в интернете.
 				</p>
 				<button className={s.button}>
-					Start for Free
+					Начать
 					<Image src={arrow} alt="" className={s.arrow} />
 				</button>
 			</div>

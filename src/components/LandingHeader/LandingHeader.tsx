@@ -22,15 +22,15 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 	const navigationList = [
 		{
 			id: 0,
-			title: "Home",
+			title: "Главная",
 		},
 		{
 			id: 1,
-			title: "Services",
+			title: "Услуги",
 		},
 		{
 			id: 2,
-			title: "Portfolio",
+			title: "Наши работы",
 		},
 	];
 
@@ -44,8 +44,8 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 			customNotification(
 				"success",
 				"top",
-				"Thank you",
-				"We text you soon!"
+				"Спасибо",
+				"Мы скоро с вами свяжемся!"
 			);
 
 			console.log(`Users's email: ${email}`);
@@ -86,7 +86,7 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 						size="large"
 						onClick={() => setContactOpen(true)}
 					>
-						Contact with us
+						Связаться с нами
 					</Button>
 				</>
 			)}
@@ -115,15 +115,19 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 			</Drawer>
 
 			<ModalComponent open={contactOpen} setOpen={setContactOpen}>
-				<Form onFinish={onSubmitContact} form={contact}>
-					<p className={s.contactTitle}>Input your contacts</p>
+				<Form
+					onFinish={onSubmitContact}
+					form={contact}
+					layout="vertical"
+				>
+					<p className={s.contactTitle}>Ваши контакты</p>
 					<Form.Item
 						name="email"
 						label="Email"
 						rules={[
 							{
 								required: true,
-								message: "Please input your email!",
+								message: "Введите свою почту!",
 							},
 						]}
 					>
@@ -136,7 +140,7 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 							className={s.contactButton}
 							onClick={() => setContactOpen(false)}
 						>
-							Close
+							Отмена
 						</Button>
 						<Button
 							size="large"
@@ -145,7 +149,7 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 							className={s.contactButton}
 							loading={loading}
 						>
-							Submit
+							Отправить
 						</Button>
 					</Form.Item>
 				</Form>
