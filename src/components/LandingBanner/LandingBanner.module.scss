@@ -28,7 +28,7 @@
 
 	line-height: 25px;
 }
-.button {
+.button {@include fluid(font-size, 16px, 18px);
 	display: flex;
 	margin: auto;
 	padding: 15px 40px;
