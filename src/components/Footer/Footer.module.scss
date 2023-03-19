@@ -1,6 +1,7 @@
 @import "../../../styles/mixins.scss";
 
 .container {
+	@include fluid(margin-top, 30px, 60px);
 	background: $background-blue;
 	box-sizing: border-box;
 }

@@ -1,14 +1,14 @@
 import Head from "next/head";
 import React, { FC } from "react";
-import LandingHeader from "../LandingHeader/LandingHeader";
-import LayoutFooter from "../LayoutFooter/LayoutFooter";
-import s from "./LandingLayout.module.scss";
+import LandingHeader from "../Header/Header";
+import LayoutFooter from "../Footer/Footer";
+import s from "./Layout.module.scss";
 
-interface LandingLayoutProps {
+interface LayoutProps {
 	children: any;
 }
 
-const LandingLayout: FC<LandingLayoutProps> = ({ children }) => (
+const Layout: FC<LayoutProps> = ({ children }) => (
 	<>
 		<Head>
 			<title>Tech.io</title>
@@ -27,4 +27,4 @@ const LandingLayout: FC<LandingLayoutProps> = ({ children }) => (
 	</>
 );
 
-export default LandingLayout;
+export default Layout;

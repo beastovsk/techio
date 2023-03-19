@@ -1,11 +1,11 @@
 import { Input } from "antd";
 import React, { FC, useState } from "react";
 import { customNotification } from "../../utils/notification";
-import s from "./LayoutFooter.module.scss";
+import s from "./Footer.module.scss";
 
-interface LayoutFooterProps {}
+interface FooterProps {}
 
-const LayoutFooter: FC<LayoutFooterProps> = () => {
+const Footer: FC<FooterProps> = () => {
 	const [email, setEmail] = useState("");
 
 	const companyInfo = [
@@ -62,4 +62,4 @@ const LayoutFooter: FC<LayoutFooterProps> = () => {
 	);
 };
 
-export default LayoutFooter;
+export default Footer;

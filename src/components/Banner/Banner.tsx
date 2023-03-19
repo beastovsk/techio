@@ -1,17 +1,15 @@
 import { Button } from "antd";
 import Image from "next/image";
 import React, { FC } from "react";
-import s from "./LandingBanner.module.scss";
+import s from "./Banner.module.scss";
 
 import womanImage from "../../assets/woman-banner.svg";
 import manImage from "../../assets/man-banner.svg";
 import arrow from "../../assets/arrow.svg";
 
-import useMedia from "use-media";
+interface BannerProps {}
 
-interface LandingBannerProps {}
-
-const LandingBanner: FC<LandingBannerProps> = () => {
+const Banner: FC<BannerProps> = () => {
 	return (
 		<div className={s.container}>
 			<Image src={womanImage} alt="" className={s.womanImage} />
@@ -37,4 +35,4 @@ const LandingBanner: FC<LandingBannerProps> = () => {
 	);
 };
 
-export default LandingBanner;
+export default Banner;
