@@ -1,9 +1,9 @@
 import React, { FC } from "react";
-import s from "./LandingInfo.module.scss";
+import s from "./Info.module.scss";
 
-interface LandingInfoProps {}
+interface InfoProps {}
 
-const LandingInfo: FC<LandingInfoProps> = () => (
+const Info: FC<InfoProps> = () => (
 	<div className={s.container}>
 		<h1 className={s.title}>
 			Кто мы такие?
@@ -19,4 +19,4 @@ const LandingInfo: FC<LandingInfoProps> = () => (
 	</div>
 );
 
-export default LandingInfo;
+export default Info;

@@ -1,14 +1,15 @@
-import LandingBanner from "../src/components/LandingBanner/LandingBanner";
-import LandingInfo from "../src/components/LandingInfo/LandingInfo";
-import LandingLayout from "../src/components/LandingLayout/LandingLayout";
-import LandingServices from "../src/components/LandingServices/LandingServices";
+import LandingLayout from "../src/components/Layout/Layout";
 
 import meeting from "../src/assets/lottie/meeting.json";
 import developing from "../src/assets/lottie/developing.json";
 import result from "../src/assets/lottie/result.json";
 
+import Roadmap from "../src/components/Roadmap/Roadmap";
+import Info from "../src/components/Info/Info";
+import Banner from "../src/components/Banner/Banner";
+
 export default function Home() {
-	const servicesList = [
+	const roadmapList = [
 		{
 			title: "Митинг",
 			subtitle: "Определение потребности, цели и тематики сайта",
@@ -35,9 +36,9 @@ export default function Home() {
 	];
 	return (
 		<LandingLayout>
-			<LandingBanner />
-			<LandingInfo />
-			<LandingServices servicesList={servicesList} />
+			<Banner />
+			<Info />
+			<Roadmap roadmapList={roadmapList} />
 		</LandingLayout>
 	);
 }

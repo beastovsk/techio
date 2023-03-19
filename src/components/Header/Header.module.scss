@@ -13,6 +13,8 @@
 
 .logo {
 	@include fluid(font-size, 28px, 36px);
+	// equal center nav menu
+	padding-right: 100px;
 
 	font-weight: 700;
 	color: $basic-black;

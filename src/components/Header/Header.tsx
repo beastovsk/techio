@@ -1,15 +1,15 @@
 import { Button, Drawer, Form, Input, Tooltip } from "antd";
 import Link from "next/link";
 import React, { FC, useState } from "react";
-import s from "./LandingHeader.module.scss";
+import s from "./Header.module.scss";
 
 import useMedia from "use-media";
 import { ModalComponent } from "../UI/MyModal/ModalComponent";
 import { customNotification } from "../../utils/notification";
 
-interface LandingHeaderProps {}
+interface HeaderProps {}
 
-const LandingHeader: FC<LandingHeaderProps> = () => {
+const Header: FC<HeaderProps> = () => {
 	const [contact] = Form.useForm();
 
 	const [drawer, setDrawer] = useState(false);
@@ -23,14 +23,17 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 		{
 			id: 0,
 			title: "Главная",
+			link: "/",
 		},
 		{
 			id: 1,
 			title: "Услуги",
+			link: "/services",
 		},
 		{
 			id: 2,
 			title: "Наши работы",
+			link: "/portfolio",
 		},
 	];
 
@@ -75,8 +78,8 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 			) : (
 				<>
 					<nav className={s.navigation}>
-						{navigationList.map(({ id, title }) => (
-							<Link href="" key={id} className={s.navItem}>
+						{navigationList.map(({ id, title, link }) => (
+							<Link href={link} key={id} className={s.navItem}>
 								{title}
 							</Link>
 						))}
@@ -93,8 +96,8 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 
 			<Drawer onClose={() => setDrawer(false)} open={drawer} width={320}>
 				<nav className={s.navigation}>
-					{navigationList.map(({ id, title }) => (
-						<Link href="" key={id} className={s.navItem}>
+					{navigationList.map(({ id, title, link }) => (
+						<Link href={link} key={id} className={s.navItem}>
 							{title}
 						</Link>
 					))}
@@ -158,4 +161,4 @@ const LandingHeader: FC<LandingHeaderProps> = () => {
 	);
 };
 
-export default LandingHeader;
+export default Header;
