@@ -12,13 +12,10 @@ import useMedia from "use-media";
 interface LandingBannerProps {}
 
 const LandingBanner: FC<LandingBannerProps> = () => {
-	const tablet = useMedia({ minWidth: "769px" }, true);
-
 	return (
 		<div className={s.container}>
-			{tablet ? (
-				<Image src={womanImage} alt="" className={s.womanImage} />
-			) : null}
+			<Image src={womanImage} alt="" className={s.womanImage} />
+
 			<div className={s.content}>
 				<h1 className={s.title}>
 					Помогаем бизнесу
@@ -34,9 +31,8 @@ const LandingBanner: FC<LandingBannerProps> = () => {
 					<Image src={arrow} alt="" className={s.arrow} />
 				</button>
 			</div>
-			{tablet ? (
-				<Image src={manImage} alt="" className={s.manImage} />
-			) : null}
+
+			<Image src={manImage} alt="" className={s.manImage} />
 		</div>
 	);
 };

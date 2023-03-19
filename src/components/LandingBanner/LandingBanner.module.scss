@@ -28,7 +28,8 @@
 
 	line-height: 25px;
 }
-.button {@include fluid(font-size, 16px, 18px);
+.button {
+	@include fluid(font-size, 16px, 18px);
 	display: flex;
 	margin: auto;
 	padding: 15px 40px;
@@ -49,7 +50,15 @@
 
 .womanImage {
 	@include fluid(width, 200px, 250px);
+
+	@media screen and (max-width: "769px") {
+		display: none;
+	}
 }
 .manImage {
 	@include fluid(width, 200px, 250px);
+
+	@media screen and (max-width: "769px") {
+		display: none;
+	}
 }

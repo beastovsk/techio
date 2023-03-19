@@ -2,6 +2,7 @@
 
 .container {
 	background: $background-blue;
+	box-sizing: border-box;
 }
 .header {
 	@include fluid(margin-top, 60px, 80px);

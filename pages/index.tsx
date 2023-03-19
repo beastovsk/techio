@@ -3,10 +3,6 @@ import LandingInfo from "../src/components/LandingInfo/LandingInfo";
 import LandingLayout from "../src/components/LandingLayout/LandingLayout";
 import LandingServices from "../src/components/LandingServices/LandingServices";
 
-// import firstImage from "../src/assets/landing-image-1.svg";
-// import secondImage from "../src/assets/landing-image-2.svg";
-// import thirdImage from "../src/assets/landing-image-3.svg";
-
 import meeting from "../src/assets/lottie/meeting.json";
 import developing from "../src/assets/lottie/developing.json";
 import result from "../src/assets/lottie/result.json";
