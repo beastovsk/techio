@@ -20,6 +20,7 @@ const LandingServices: FC<LandingServicesProps> = ({ servicesList }) => {
 			{servicesList.map(({ title, subtitle, lottie, link, reversed }) => (
 				<li
 					className={reversed ? `${s.item} ${s.reverseFlex}` : s.item}
+					key={title}
 				>
 					<div className={s.info}>
 						<h1 className={s.title}>{title}</h1>
