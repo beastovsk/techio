@@ -7,11 +7,12 @@ import result from "../src/assets/lottie/result.json";
 import Roadmap from "../src/components/Roadmap/Roadmap";
 import Info from "../src/components/Info/Info";
 import Banner from "../src/components/Banner/Banner";
+import TechnologiesList from "../src/components/TechnologiesList/TechnologiesList";
 
 export default function Home() {
 	const roadmapList = [
 		{
-			title: "Митинг",
+			title: "Планирование",
 			subtitle: "Определение потребности, цели и тематики сайта",
 			lottie: meeting,
 			link: "",
@@ -20,7 +21,7 @@ export default function Home() {
 		{
 			title: "Разработка",
 			subtitle:
-				"Пишем код для вашего будущего продукта на современных технологиях для быстрого взаимодействия сайта с клиентом",
+				"Пишем код для вашего продукта на современных технологиях для быстрого взаимодействия клиентом с сайтом",
 			lottie: developing,
 			link: "",
 			reversed: true,
@@ -39,6 +40,7 @@ export default function Home() {
 			<Banner />
 			<Info />
 			<Roadmap roadmapList={roadmapList} />
+			<TechnologiesList />
 		</LandingLayout>
 	);
 }

@@ -1,0 +1,53 @@
+@import "../../../styles/mixins.scss";
+
+.container {
+	@include fluid(margin-top, 40px, 60px);
+}
+.title {
+	@include fluid(margin-bottom, 40px, 60px);
+	@include fluid(font-size, 32px, 42px);
+
+	text-align: center;
+
+	display: flex;
+	justify-content: center;
+}
+.list {
+	@include fluid(margin-top, 40px, 60px);
+	@include fluid(margin-bottom, 40px, 60px);
+	@include fluid(gap, 30px, 40px);
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+
+	@media screen and (max-width: $breakpoint-md) {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+}
+.item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	width: 40%;
+
+	@media screen and (max-width: $breakpoint-md) {
+		width: 100%;
+	}
+}
+.image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.label {
+	@include fluid(font-size, 24px, 36px);
+	@include fluid(margin-top, 20px, 40px);
+	@include fluid(margin-bottom, 20px, 40px);
+}
+.description {
+	@include fluid(font-size, 16px, 24px);
+	color: $basic-grey;
+}

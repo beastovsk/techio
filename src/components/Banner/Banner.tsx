@@ -24,10 +24,10 @@ const Banner: FC<BannerProps> = () => {
 					Пишем сайты для быстрого и эффективного запуска вашего
 					бизнеса в интернете.
 				</p>
-				<button className={s.button}>
+				{/* <button className={s.button}>
 					Начать
 					<Image src={arrow} alt="" className={s.arrow} />
-				</button>
+				</button> */}
 			</div>
 
 			<Image src={manImage} alt="" className={s.manImage} />

@@ -16,14 +16,15 @@ interface RoadmapProps {
 
 const Roadmap: FC<RoadmapProps> = ({ roadmapList }) => {
 	return (
-		<ul className={s.container}>
+		<div className={s.container}>
+			<h1 className={s.title}>Как нам удается эффективно работать?</h1>
 			{roadmapList.map(({ title, subtitle, lottie, link, reversed }) => (
 				<li
 					className={reversed ? `${s.item} ${s.reverseFlex}` : s.item}
 					key={title}
 				>
 					<div className={s.info}>
-						<h1 className={s.title}>{title}</h1>
+						<h1 className={s.label}>{title}</h1>
 						<p className={s.subtitle}>{subtitle}</p>
 						{/* <Link href={link} className={s.link}>
 							What is {title}?
@@ -33,7 +34,7 @@ const Roadmap: FC<RoadmapProps> = ({ roadmapList }) => {
 					<Player src={lottie} className="player" loop autoplay />
 				</li>
 			))}
-		</ul>
+		</div>
 	);
 };
 
