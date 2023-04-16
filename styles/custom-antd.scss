@@ -1,15 +1,18 @@
 @import "mixins";
 
 .ant-select-single.ant-select-lg .ant-select-selector {
-  padding-left: 22px !important;
-  padding-right: 22px !important;
-  font-size: 14px;
+	padding-left: 22px !important;
+	padding-right: 22px !important;
+	font-size: 14px;
 }
 
 .ant-select {
-  width: 100%;
+	width: 100%;
 }
 
 .ant-modal-footer {
-  display: none;
+	display: none;
+}
+.ant-modal-close {
+	top: 25px !important;
 }

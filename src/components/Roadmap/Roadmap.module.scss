@@ -4,7 +4,13 @@
 	display: flex;
 	flex-direction: column;
 }
-
+.title {
+	@include fluid(font-size, 32px, 42px);
+	@include fluid(margin-bottom, 40px, 40px);
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
 .item {
 	display: flex;
 	justify-content: space-between;
@@ -46,8 +52,8 @@
 	}
 }
 
-.title {
-	@include fluid(font-size, 42px, 56px);
+.label {
+	@include fluid(font-size, 28px, 36px);
 	@include fluid(margin-bottom, 30px, 40px);
 }
 .subtitle {

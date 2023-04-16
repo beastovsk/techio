@@ -60,9 +60,11 @@ const Header: FC<HeaderProps> = () => {
 
 	return (
 		<div className={s.container}>
-			<div className={s.logo}>
-				Tech<span className={s.logoSpan}>.io</span>
-			</div>
+			<Link href="/">
+				<div className={s.logo}>
+					Tech<span className={s.logoSpan}>.io</span>
+				</div>
+			</Link>
 			{isBurger ? (
 				<Button className={s.burger} onClick={() => setDrawer(!drawer)}>
 					<svg
@@ -112,7 +114,7 @@ const Header: FC<HeaderProps> = () => {
 							setDrawer(false);
 						}}
 					>
-						Contact with us
+						Связаться с нами
 					</Button>
 				</div>
 			</Drawer>
@@ -126,15 +128,20 @@ const Header: FC<HeaderProps> = () => {
 					<p className={s.contactTitle}>Ваши контакты</p>
 					<Form.Item
 						name="email"
-						label="Email"
 						rules={[
 							{
 								required: true,
-								message: "Введите свою почту!",
+								type: "email",
+								message:
+									"Введите пожалуйста вашу корректную почту",
 							},
 						]}
 					>
-						<Input className={s.contactInput} />
+						<Input
+							className={s.contactInput}
+							placeholder="Введите вашу почту"
+							size="large"
+						/>
 					</Form.Item>
 					<Form.Item className={s.contactButtons}>
 						<Button

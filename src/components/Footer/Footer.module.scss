@@ -5,72 +5,12 @@
 	background: $background-blue;
 	box-sizing: border-box;
 }
-.header {
-	@include fluid(margin-top, 60px, 80px);
-	@include fluid(margin-bottom, 60px, 80px);
-}
-.title {
-	@include fluid(font-size, 32px, 42px);
-	@include fluid(margin-bottom, 30px, 50px);
-
+.wrapper {
+	@include fluid(padding-top, 40px, 60px);
+	@include fluid(padding-bottom, 40px, 60px);
+	@include container;
 	display: flex;
-	justify-content: center;
-	color: $basic-white;
-
-	@media screen and (max-width: $breakpoint-sm) {
-		@include fluid(font-size, 22px, 28px);
-	}
-}
-.feedback {
-	display: flex;
-	justify-content: center;
-	margin: auto;
-
-	@media screen and (max-width: $breakpoint-md) {
-		flex-direction: column;
-	}
-}
-.input {
-	@include fluid(font-size, 16px, 24px);
-
-	padding: 20px 30px;
-	border-radius: 15px 0px 0px 15px;
-	background: none;
-	color: $basic-white;
-	width: 50%;
-
-	&::placeholder {
-		color: $basic-grey;
-	}
-
-	@media screen and (max-width: $breakpoint-md) {
-		width: 80%;
-		border-radius: 15px;
-		margin: auto;
-	}
-}
-.button {
-	@include fluid(font-size, 16px, 24px);
-	@include fluid(padding-top, 10px, 20px);
-	@include fluid(padding-bottom, 10px, 20px);
-	@include fluid(padding-left, 30px, 60px);
-	@include fluid(padding-right, 30px, 60px);
-
-	border-radius: 0px 15px 15px 0px;
-	border: none;
-	background: $basic-blue;
-	color: $basic-white;
-	cursor: pointer;
-
-	&:hover {
-		background: rgb(102, 144, 218);
-		transition: $trn;
-	}
-
-	@media screen and (max-width: $breakpoint-md) {
-		border-radius: 15px;
-		margin: 20px auto;
-	}
+	justify-content: space-between;
 }
 .logo {
 	@include fluid(margin-bottom, 20px, 40px);
@@ -92,7 +32,7 @@
 }
 .item {
 	@include fluid(margin-bottom, 10px, 20px);
-	@include fluid(font-size, 16px, 18px);
+	@include fluid(font-size, 22px, 28px);
 	font-weight: 300;
 	color: $basic-grey;
 
