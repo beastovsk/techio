@@ -1,0 +1,15 @@
+@import "/styles/mixins.scss";
+
+.container {
+	box-sizing: border-box;
+	@include container;
+}
+.title {
+	@include fluid(margin-top, 20px, 40px);
+	@include fluid(font-size, 22px, 32px);
+	color: $basic-grey;
+	text-align: center;
+	font-weight: normal;
+	display: flex;
+	justify-content: center;
+}
