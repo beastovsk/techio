@@ -11,7 +11,7 @@ const TechnologiesList: FC<TechnologiesListProps> = () => {
 			title: "Next.js",
 			description:
 				"Позволяет разрабатывать веб-приложения с меньшей скоростью загрузки страницы и используя улучшенную СЕО оптимизацию ",
-			logo: "/next.svg",
+			logo: "/icons/nextjs.svg",
 			id: 0,
 		},
 		{

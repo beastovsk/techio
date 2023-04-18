@@ -89,7 +89,7 @@ const Header: FC<HeaderProps> = () => {
 					<Button
 						type="primary"
 						size="large"
-						onClick={() => setContactOpen(true)}
+						href="mailto:techio.sar@gmail.com"
 					>
 						Связаться с нами
 					</Button>
@@ -109,10 +109,7 @@ const Header: FC<HeaderProps> = () => {
 						type="primary"
 						size="large"
 						className={s.button}
-						onClick={() => {
-							setContactOpen(true);
-							setDrawer(false);
-						}}
+						href="mailto:techio.sar@gmail.com"
 					>
 						Связаться с нами
 					</Button>
